@@ -4,6 +4,7 @@ local TitleUI = Instance.new("TextLabel")
 local CloseButton = Instance.new("TextButton")
 local SmoothEdge = Instance.new("UICorner")
 
+DraggingUI.Name = "DraggingUI"
 DraggingUI.Parent = game.CoreGui
 
 MainUI.Name = "MainUI"
@@ -16,21 +17,27 @@ MainUI.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
 
 SmoothEdge.Parent = MainUI
 SmoothEdge.Name = "SmoothEdge"
-SmoothEdge.CornerRadius = UDim.new(1, 0)
+SmoothEdge.CornerRadius = UDim.new(0.095, 0)
 
 TitleUI.Name = "TitleUI"
 TitleUI.Text = "Draggable UI - V1"
 TitleUI.Parent = MainUI
 TitleUI.Draggable = true
+TitleUI.TextScaled = true
 TitleUI.Font = Enum.Font.SourceSansBold
-Title.TextColor3 = Color3.fromRGB(0, 0, 0)
-TitleUI.Size = UDim2.new(0.2, 0, 0.00875, 0)
+TitleUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+TitleUI.Size = UDim2.new(0.2, 0, 0.3, 0)
+TitleUI.Position = UDim2.new(0.4, 0, -0.095, 0)
 
 CloseButton.Name = "CloseButton"
 CloseButton.Text = "X"
 CloseButton.Parent = MainUI
 CloseButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-CloseButton.Size = UDim2.new(0.00675, 0, 0.00675, 0)
+CloseButton.Size = UDim2.new(0.075, 0, 0.1, 0)
 CloseButton.BackgroundColor3 = Color3.fromRGB(245, 149, 162)
 CloseButton.Font = Enum.Font.SourceSansBold
 CloseButton.TextSize = 21.000
+
+CloseButton.MouseButton1Click:Connect(function()
+    DraggingUI:Destroy()
+end)
