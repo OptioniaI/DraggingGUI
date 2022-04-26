@@ -12,7 +12,7 @@ MainUI.Active = true
 MainUI.Draggable = true
 MainUI.Visible = true
 MainUI.Size = UDim2.new(0.175, 0, 0.15, 0)
-MainUI.BackgroundColor3 = Color3.new(255, 255, 0)
+MainUI.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
 
 SmoothEdge.Parent = MainUI
 SmoothEdge.Name = "SmoothEdge"
@@ -31,6 +31,6 @@ CloseButton.Text = "X"
 CloseButton.Parent = MainUI
 CloseButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 CloseButton.Size = UDim2.new(0.00675, 0, 0.00675, 0)
-CloseButton.BackgroundColor3 = Color3.new(245, 149, 162)
+CloseButton.BackgroundColor3 = Color3.fromRGB(245, 149, 162)
 CloseButton.Font = Enum.Font.SourceSansBold
 CloseButton.TextSize = 21.000
